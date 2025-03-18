@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportes Anónimos</title>
+    <title>Reportes Anónimos - KFC</title>
+    
+    <!-- Meta para PWA -->
+    <meta name="theme-color" content="#ff0000"> <!-- Rojo KFC -->
+    <meta name="description" content="App para enviar reportes anónimos sobre ética en los restaurantes KFC.">
+    
+    <!-- Enlace al manifiesto de la PWA -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Iconos -->
+    <link rel="icon" href="multimedia/778f65ca-c77c-4ffb-b318-496e5d96f24e.jpg" sizes="90x90" type="image/jpg">
+    <link rel="icon" href="multimedia/778f65ca-c77c-4ffb-b318-496e5d96f24e.jpg" sizes="200x200" type="image/jpg">
+
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <div class="container">
-        <h2>Reportar Situación</h2>
-        <textarea id="mensaje" placeholder="Escribe tu reporte aquí..." rows="5"></textarea>
-        <button onclick="enviarReporte()">Enviar Reporte</button>
-        <p id="status"></p>
-    </div>
+    <!-- Header con logo y nombre -->
+    <header>
+        <div class="logo">
+            <img src="multimedia/778f65ca-c77c-4ffb-b318-496e5d96f24e.jpg" alt="KFC Logo" class="logo-img">
+        </div>
+        <h1>Reportes Éticos KFC</h1>
+    </header>
 
-    <script type="module" src="app.js"></script>
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("service-worker.js")
-                .then(() => console.log("Service Worker registrado"))
-                .catch(error => console.log("Error registrando Service Worker:", error));
-        }
-    </script>
+    <!-- Cuerpo de la página -->
+    <section class="welcome-section">
+        <p>Bienvenido a la plataforma de reportes anónimos de KFC. Aquí puedes enviar tus inquietudes, sugerencias o situaciones de ética relacionadas con nuestros restaurantes. Tu privacidad está asegurada.</p>
+        
+        <!-- Botón para enviar reporte -->
+        <button onclick="window.location.href='reportes.html'">Enviar Reporte Anónimo</button>
+    </section>
+
+    <!-- Footer con contacto e información adicional -->
+    <footer>
+        <p>© 2025 KFC Intelectiva | Todos los derechos reservados</p>
+        <p><a href="terms.html">Términos y Condiciones</a> | <a href="privacy.html">Política de Privacidad</a></p>
+    </footer>
 </body>
 </html>
